@@ -41,7 +41,7 @@
     Remplace le propriétaire de l'événement ID
     Soulève une erreur si l'ID est inexistant
 
-## Format de stockage :
+## Format de stockage des événements :
     Array : [Date de début, Date de fin, Propriétaire, Description, ID] x n éléments
     ID : Déterminé selon l'ID max dans la liste d'événements. Utiliser un ID absolu ?
 
@@ -65,7 +65,7 @@
     nom.modifier_fin_evenement(ID_evenement, nouvelle_date_fin)
 
     Modification de la description d'un événement
-    nom.modifier_description_evenement(ID_evenement, "Nouvelle description")
+    nom.modifier_description_evenement(ID_evenement, "nouvelle description")
 
     Modification du propriétaire d'un événement
     nom.modifier_proprietaire_evenemnt(ID_evenement, "nouveau proprietaire")
