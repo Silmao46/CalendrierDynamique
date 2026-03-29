@@ -1,6 +1,6 @@
 # CalendrierDynamique
 
-## Architecture :
+## Architecture calendrier :
 
 ### dans calendrier.py
 #### classe Calendrier:
@@ -70,3 +70,8 @@
     Modification du propriétaire d'un événement
     nom.modifier_proprietaire_evenemnt(ID_evenement, "nouveau proprietaire")
 
+## Architecture patient :
+### dans patient.py
+#### Fonction ajout "parcours" patient
+    Entrée : Nom patient, équipe en charge, array d'événements (array contenant les événements du parcours du patient)
+    Ajoute les événements du patient et crée une structure parallèle connectée au calendrier
