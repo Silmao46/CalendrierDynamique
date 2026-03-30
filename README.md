@@ -72,6 +72,15 @@
 
 ## Architecture patient :
 ### dans patient.py
+
+#### Presets de parcours de patient
+    Plusieurs array préconfigurés pour des parcours typiques (liste d'événement sans date et avec temps minimum entre deux événements)
+
+#### Mémoire de patients
+    Dictionnaire avec comme clé l'identifiant du patient et comme valeur son parcours.
+
 #### Fonction ajout "parcours" patient
-    Entrée : Nom patient, équipe en charge, array d'événements (array contenant les événements du parcours du patient)
-    Ajoute les événements du patient et crée une structure parallèle connectée au calendrier
+    Entrée : Calendrier, identifiant patient, array d'événements (array contenant les événements du parcours du patient)
+    Ajoute les événements du patient et crée une structure parallèle connectée au calendrier (connecté au système de simulation pour ajouter les événements aux bons moments)
+    La structure parallèle a la forme suivante : [date_debut, date_fin, "propriétaire", "description", ID] x n éléments
+    Enregistré dans la mémoire de patients

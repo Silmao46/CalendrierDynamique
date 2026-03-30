@@ -47,9 +47,9 @@ class Calendrier:
                            self.evenements[2, self.evenements[2] == proprietaire],
                            self.evenements[3, self.evenements[2] == proprietaire],
                            self.evenements[4, self.evenements[2] == proprietaire]])
+            return calendrier_propriétaire
         except IndexError as e:
             print(f"Erreur : {e}")
-        return calendrier_propriétaire
     
     def modifier_fin_evenement(self, ID: int, nouvelle_date_fin: datetime):
         """Modifier la date de fin d'un événement"""

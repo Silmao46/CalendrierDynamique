@@ -2,8 +2,9 @@
 
 
 from datetime import datetime
+import numpy as np
 from calendrier import Calendrier
-
+from patient import ajout_parcours_patient
 
 # Initialisation du calendrier
 
@@ -99,3 +100,17 @@ print("Test de retour du calendrier d'un propriétaire avec un propriétaire ine
 calendrier_inexistant = test_calendrier.calendrier_proprietaire("Equipe Inexistante")
 print(calendrier_inexistant)
 
+# Test d'ajout d'un parcours type à un patient dans le calendrier
+memoire_patient = {}
+
+parcours = np.array([[[datetime(2026, 6, 1)], [datetime(2026, 6, 1, 10, 0)], ["Equipe 1"], ["Diagnostic initial"]],
+                     [[datetime(2026, 6, 8)], [datetime(2026, 6, 8, 10, 0)], ["Equipe 1"], ["Rendez-vous de suivi"]],
+                     [[datetime(2026, 6, 15)], [datetime(2026, 6, 15, 10, 0)], ["Equipe 1"], ["Rendez-vous de suivi 2"]]])
+
+print(parcours[1, 1])
+
+print("Test d'ajout d'un parcours type à un patient dans le calendrier :")
+ajout_parcours_patient(test_calendrier, "Patient 1", parcours, memoire_patient)
+print(test_calendrier)
+print("Mémoire patients :")
+print(memoire_patient)
