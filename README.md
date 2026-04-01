@@ -83,4 +83,5 @@
     Entrée : Calendrier, identifiant patient, array d'événements (array contenant les événements du parcours du patient)
     Ajoute les événements du patient et crée une structure parallèle connectée au calendrier (connecté au système de simulation pour ajouter les événements aux bons moments)
     La structure parallèle a la forme suivante : [date_debut, date_fin, "propriétaire", "description", ID] x n éléments
-    Enregistré dans la mémoire de patients
+    La fonction prend l'output de la fonction d'ajout d'événement de calendrier.py (L'ID d'événement) pour le mettre dans la structure parallèle
+    La structure est enregistrée dans la mémoire de patients (pour l'instant un simple dictionnaire, mais pourrait être un json ou une base de donnée)
